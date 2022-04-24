@@ -15,11 +15,22 @@ public class PracticeApplication {
 //		ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
 ApplicationContext context = new AnnotationConfigApplicationContext(BeanConfig.class);
 
-		Doctor doctor = context.getBean(Doctor.class);
-		doctor.assist();
-
 		Nurse nurse = context.getBean(Nurse.class);
 		nurse.assist();
+		nurse.setQualification("Yooo!");
+
+		Doctor doctor = context.getBean(Doctor.class);
+		doctor.assist();
+       doctor.setQualification("B.Sc in Agbero");
+
+//		System.out.println( doctor.getQualification());
+//		System.out.println(doctor);
+//
+//		Doctor doctor1 = context.getBean(Doctor.class);
+//		System.out.println(doctor1);
+//
+//		Nurse nurse = context.getBean(Nurse.class);
+//		nurse.assist();
 	}
 
 }
