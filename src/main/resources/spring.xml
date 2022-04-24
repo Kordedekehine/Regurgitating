@@ -5,9 +5,10 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
     http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <bean id="doctor" class="Freestyle.practice.Doctor">
-        <constructor-arg value="MBBS"></constructor-arg>
-    </bean>
-    <bean id="nurse" class="Freestyle.practice.Nurse">
-    </bean>
+    <context:component-scan base-package="Freestyle.practice"></context:component-scan>
+<!--    <bean id="doctor" class="Freestyle.practice.Doctor">-->
+<!--        <constructor-arg value="MBBS"></constructor-arg>-->
+<!--    </bean>-->
+<!--    <bean id="nurse" class="Freestyle.practice.Nurse">-->
+<!--    </bean>-->
 </beans>
